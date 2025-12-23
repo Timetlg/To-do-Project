@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class ProjectToDo {
 
-    //hello
+    //did it work?
     /*
     - adds new tasks by scanning for user input
     - adds task to list created in main
