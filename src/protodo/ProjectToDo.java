@@ -21,7 +21,6 @@ public class ProjectToDo {
         // Add new task to task list
         list.add(newTask);
 
-        
         System.out.println("\nTask Added");
         printList(list);
 
