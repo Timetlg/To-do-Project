@@ -27,9 +27,21 @@ public class ProjectToDo {
     }
 
     /*
-    - print method of menu selection
+    - print the dashboard of total and completed tasks using
+    .stream to get each item
+    .filter to get all the completed tasks
+    .count to count each of the completed tasks
+    - prints the menu
      */
-    private static void printMenu() {
+    private static void printMenu(ArrayList<Task> list) {
+        
+        // count the number of completed tasks using .stream
+        long completedTasks = list.stream().filter(Task::isCompleted).count();
+        int totalCount = list.size();
+        
+        System.out.println("\n--- Dashboard ---");
+        System.out.println("Total Tasks: " +  totalCount + " | Completed: " + completedTasks);
+        
         // menu
         System.out.println("\nMenu \n"
                 + "1. Add New Task \n"
@@ -158,7 +170,7 @@ public class ProjectToDo {
         // while loop that keeps running until user chooses to "exit"
         while (running) {
 
-            printMenu();
+            printMenu(taskList);
 
             int choice = getInt(myScan);
 
